@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brain Tumor Detection</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <style>
+    body{
+      margin:0;
+      padding:0;
+      background: linear-gradient(to bottom, black,black ,#055a8c );
+    }
+    a:hover{
+      background-color: #055a8c;
+
+
+    }
+
+    .img-preview {
+        width: 256px;
+        height: 256px;
+        border: 5px solid white;
+        box-shadow: 0px 2px 4px 0px white;
+        margin-top: 10em;
+        position:absolute;
+
+
+
+    }
+
+    .img-preview>div {
+        width: 100%;
+        height: 100%;
+        background-size: 256px 256px;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    input[type="file"] {
+        display: none;
+    }
+
+</style>
+</head>
+
+<body>
+
+           <ul style="  list-style-type: none">
+           <li class="logo">  <image src="{{url_for('static',filename = 'css/logo.jpeg')}}" style="position: absolute;right:45%;width:130px;
+           height : 135px;margin-top:-20px" > </li>
+           <li style=" float : left;margin-left: 30px;display: inline-block"><a href="home" style="color: white ; border-radius:25px;
+           border: 1px solid transparent;  padding:5px 20px; text-decoration: none; display: block" > HOME</a></li>
+           <li style=" float : left;display: inline-block"><a href="neural" style="color: white ;border-radius:25px;  border: 1px solid transparent;
+            padding:5px 20px; text-decoration: none;  display: block"> UPLOAD</a></li>
+           <li style=" float : right;margin-right: 30px;display: inline-block"><a href="contact" style="color: white ; border-radius:25px;
+            border: 1px solid transparent;  padding:5px 20px; text-decoration: none;  display: block" > CONTACT</a></li>
+          <li style=" float : right;display: inline-block"><a href="about" style="color: white ;border-radius:25px;  border: 1px solid transparent;
+           padding:5px 20px; text-decoration: none;  display: block" > ABOUT</a></li></ul>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+
+
+          <center>
+          <div class="container">
+
+     <div id="content" style="margin-top:3em" >
+
+
+
+
+       <h2 style="font-family: Times New Roman;font-size: 30px; font-weight:bold; color: white;">Brain Tumor Detector</h2>
+
+        <h3 style="font-family: Times New Roman;font-size: 20px; font-weight:bold; width: 800px;color: white;">Upload MRI Image for tumor detection</h3>
+<br/>
+     <div>
+         <form id="upload-file" method="post" enctype="multipart/form-data">
+             <label for="imageUpload" class="upload-label" style= "background-color :#055a8c;" >
+                 Browse
+             </label>
+             <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+         </form>
+
+         <div class="image-section" style="display:none;">
+             <div class="img-preview" style="margin-top:8px;margin-left:425px">
+                 <div id="imagePreview">
+                 </div>
+             </div>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+
+             <div>
+                 <button type="button" class="btn btn-primary btn-lg " id="btn-predict"  style= "background-color:black">Predict</button>
+             </div>
+         </div>
+
+         <div class="loader" style="display:none;"></div>
+
+         <h3 id="result" style="font-family: Times New Roman;font-size: 30px; font-weight:bold; color: white">
+             <span> </span>
+         </h3>
+
+     </div></div>
+    </div>
+</center>
+</body>
+
+<footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+</footer>
+
+</html>

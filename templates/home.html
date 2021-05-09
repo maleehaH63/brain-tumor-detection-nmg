@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BrainTumor Detection</title>
+        <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <style>
+    body{
+      margin:0;
+      padding:0;
+      background: linear-gradient(to bottom, black,black,black,black,#055a8c );
+    }
+    a:hover{
+      background-color:#055a8c;
+
+
+    }
+</style>
+</head>
+
+<body>
+
+         <ul style="  list-style-type: none">
+         <li class="logo">  <image src="{{url_for('static',filename = 'css/logo.jpeg')}}" style="position: absolute;right:43%;width:130px;height : 135px;
+         margin-top:-20px" > </li>
+         <li style=" float : left;margin-left: 30px;display: inline-block"><a href="home" style="color: white ; border-radius:25px;
+         border: 1px solid transparent;padding:5px 20px; text-decoration: none; display: block" > HOME</a></li>
+         <li style=" float : left;display: inline-block"><a href="neural" style="color: white ;border-radius:25px;  border: 1px solid transparent;
+          padding:5px 20px; text-decoration: none;  display: block"> UPLOAD</a></li>
+         <li style=" float : right;margin-right: 90px;display: inline-block"><a href="contact" style="color: white ; border-radius:25px;
+          border: 1px solid transparent;  padding:5px 20px; text-decoration: none;  display: block" > CONTACT</a></li>
+        <li style=" float : right;display: inline-block"><a href="about" style="color: white ;border-radius:25px;  border: 1px solid transparent;
+          padding:5px 20px; text-decoration: none;  display: block" > ABOUT</a></li></ul>
+<br/>
+<br/>
+<br/>    <div class="container">
+
+     <div id="content" style="margin-top:2em" >
+       <div class="bt" style="width:35%;float:right;margin-top: 40px">
+<image src="{{url_for('static',filename = 'css/bt2.jfif')}}" style="width: 100%;height: 320px" >
+</div>
+<br/>
+<br/>
+
+<h1 style="font-family: Times New Roman; font-weight:bold; font-size : 60px;width: 500px;background-size: cover; position: absolute;margin-left: 20px;
+text-align: left;background-position: left; color: white; "> Brain Tumor Detection</h1>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<p style="font-family: Times New Roman;font-size:15px;line-height:25px;width: 260px; float: left;margin-left: 20px;
+color: white "> The website has been designed to help people newly diagnosed with Brain Tumor.
+The aim of this website is to detect brain tumor based on predictive analysis</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<ul style="  float:left;margin-left:25px;list-style-type: none">
+<li style="display: inline-block"><a href="neural" style="color: white ; border-radius:25px; border: 1px solid white;  padding:5px 20px;
+text-decoration: none" > GET STARTED</a></li>
+</ul>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+     </div>
+    </div>
+
+</body>
+</html>
