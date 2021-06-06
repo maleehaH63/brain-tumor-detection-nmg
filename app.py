@@ -23,7 +23,7 @@ app = Flask(__name__)
 
 
 # Model saved with Keras model.save()
-MODEL_PATH ='brain_model_vgg19.h5'
+MODEL_PATH ='model/brain_model_vgg19.h5'
 
 
 model = load_model(MODEL_PATH)
